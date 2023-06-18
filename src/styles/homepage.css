@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+:root {
+  --background-color: #BCC1BA;
+  --font-color: #BCC1BA;
+  --name-font-size: 4.7rem;
+  --font: 'Quicksand', sans-serif;
+  --font-pages:'Dancing Script', cursive;
+}
+
+.homepage {
+  background: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: var(--font);
+  overflow:hidden;
+}
+
+.model {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+.homepage-grid{
+  display:grid;
+  grid-template-columns: 17fr 2fr ;
+  margin-top: 5%;
+
+
+}
+.homepage-text{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  flex-wrap:wrap;
+  margin-left: 15%;
+  grid-column: 1;
+}
+.homepage-name {
+  text-align: center;
+  font-size: var(--name-font-size);
+  color: var(--font-color);
+
+}
+.homepage-text-subtext{
+  font-size: 1.5rem; 
+  color: var(--font-color);
+}
+
+.homepage-portfolio-text{
+  font-family: var(--font);
+  color:var(--font-color);
+  margin-left: 55vw;
+  font-size: 4rem;
+  margin-top: 20vh;
+}
+.homepage-socials{
+  display: inline-flex;
+  gap:20px;
+  color:var(--font-color);
+  font-family: var(--font);
+  margin-left: 70%;
+  position: relative;
+  margin-top: 7%;
+  width: 10%;
+}
+
+.option:hover{
+  cursor:pointer;
+}
+.homepage-pages{
+  display: inline-flex;
+  flex-direction: column;
+  gap:30px;
+  text-align: right;
+  font-family:var(--font-pages);
+  font-size:1.5rem;
+  margin-top: 10%;
+  grid-column: 2;
+  margin-right: 15%;
+  margin-top: 150%;
+  
+}
+.nav{
+  background: url('../assets/Rectangle 16.png');
+  overflow:visible;
+  background-size: contain;
+  padding:15px;
+  
+}
+
+.nav:hover{
+  cursor:pointer;
+}
+
+.sticker{
+  position: fixed;
+  size: 10%;
+  bottom:0;
+}
