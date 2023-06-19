@@ -7,10 +7,11 @@ import gsap from 'gsap';
 import '../styles/homepage.css';
 
 const Model = () => {
-  const gltfPath = '/untitled1.gltf';
+  const gltfPath = '/finalmodel2.gltf';
   const [rotationTrigger, setRotationTrigger] = useState(false);
   const [model, setModel] = useState(null);
   const coverFrontRef = useRef();
+  const [rotation, setRotation] = useState({ x: 0, y: 0.02101, z: 0 });
 
   const handleCanvasClick = () => {
     setRotationTrigger(!rotationTrigger);
@@ -33,44 +34,44 @@ const Model = () => {
 
   useEffect(() => {
     if (coverFrontRef.current && rotationTrigger) {
-      const openRotation = new Euler(0, -(Math.PI / 4), 0);
+      const openRotation = new Euler(0, -(Math.PI / 2), 0);
       const rotationTween = gsap.to(coverFrontRef.current.rotation, {
         x: openRotation.x,
         y: openRotation.y,
         z: openRotation.z,
-        duration: 1, 
-        ease: 'power3.out',       });
+        duration: 2,
+        ease: 'power3.out',
+      });
 
       return () => {
-        rotationTween.kill();       };
+        rotationTween.kill();
+      };
     }
   }, [rotationTrigger]);
 
   useEffect(() => {
     if (model) {
-      model.scale.set(4, 4, 4);
-      model.rotation.y = Math.PI / 106;
-      model.rotation.x = Math.PI / 4065;
-      model.rotation.z = Math.PI / 406;
+      model.scale.set(4,4,4);
+      model.rotation.set(rotation.x, rotation.y, rotation.z);
     }
-  }, [model]);
+  }, [model, rotation]);
 
   return (
     <div className='model'>
       <Canvas onClick={handleCanvasClick}>
-        <ambientLight intensity={0.4} />
+        <ambientLight intensity={0.5} />
         <Suspense fallback={null}>
           {model && (
-            <group position={[-0.5, -3.5, 0]}>
+            <group position={[-.5, -3.45, 0]}>
               <primitive object={model} />
             </group>
           )}
         </Suspense>
-        <pointLight intensity={1} position={[5, 15, 5]} />
-        <pointLight intensity={1} position={[-5, 15, 5]} />
-        <pointLight intensity={1.0} position={[-5, 15, -5]} />
-        <pointLight intensity={1.0} position={[5, 15, -5]} />
-        <pointLight intensity={0.6} position={[0, -5, 0]} />
+        <directionalLight intensity={1} position={[5, 10, 5]} />
+        <directionalLight intensity={0.5} position={[-5, 10, 5]} />
+        <directionalLight intensity={0.5} position={[-5, 10, -5]} />
+        <directionalLight intensity={1} position={[5, 10, -5]} />
+        <pointLight intensity={1} position={[0, -5, 0]} />
       </Canvas>
     </div>
   );

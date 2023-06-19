@@ -85,8 +85,11 @@
   font-size:1.5rem;
   margin-top: 10%;
   grid-column: 2;
+  z-index:10;
   margin-right: 15%;
   margin-top: 150%;
+  text-decoration: none;
+  color:#000;
   
 }
 .nav{
@@ -94,6 +97,8 @@
   overflow:visible;
   background-size: contain;
   padding:15px;
+  text-decoration: none;
+  color:#000;
   
 }
 
@@ -105,4 +110,13 @@
   position: fixed;
   size: 10%;
   bottom:0;
+}
+
+NavLink{
+  text-decoration: none;
+}
+
+a{
+  color:#1E1E24;
+  text-decoration: none;
 }
