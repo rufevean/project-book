@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+:root{
+  --main-font : 'Quicksand', sans-serif;
+  --main-color: #BCC1BA
+}
+
+
+.Skills{
+background: #BCC1BA;
+
+min-height: 100vh;
+}
+
+
+.Skills-container{
+  display:flex;
+  gap:50px;
+min-height: 100vh;
+  justify-content:center;
+  align-items:center;
+  margin: auto 5vw;
+}
+
+
+.Skills-main-div{
+  border-radius: 15px;
+  background: #1E1E24;
+  color :#BCC1BA;
+  min-height: 60vh;
+  min-width:70vw;
+  display:grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 2fr 3fr;
+  font-family:var(--main-font);
+  padding:50px;
+  text-align:center;
+  color: #FFF;
+  font-size: 1.5rem;
+  font-family: Quicksand;
+  font-weight: 600;
+}
+
+.Skills-main-tools{
+  grid-column : span 2;
+}
+
+.Skills-main-lan,.Skills-main-lib,.Skills-main-tools{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap : 50px;
+  }
+
+
+.Skills-main-lan-con,.Skills-main-tools-con,.Skills-main-lib-con{
+  display:flex;
+  justify-items: center;
+  gap:50px;
+  align-items:center;
+  font-size:1rem;
+}
+
+
+.python,.rust,.javascript,.c,.sass,.tensorflow,.react,.vue,.three,.astro,.spline,.vim,.figma,.pp,.blender,.git,.bash{
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  gap:10px;
+}
+.python-head,.c-head,.rust-head,.javascript-head{
+  font-size:0.9rem;
+}
+
+.Skills-main-lan-con > div > img{
+  margin-bottom : 10px;
+}
+.Skills-main-tools-con > div > img{
+  margin-bottom : 10px;
+}
+.Skills-main-lib-con > div > img{
+  margin-bottom : 10px;
+}
+
+
+.Skills-main-footer{
+  display:flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  font-family: var(--main-font);
+  font-weight: initial;
+  font-size:0.8rem;
+  width:60vh;
+  color: #FFF;
+}
+
+
+.Skills-Text-div{
+  display:flex;
+  flex-direction:column;
+  gap:50px;
+  font-size:1.1rem;
+  line-height:1.2rem;
+  font-family:var(--main-font);
+}
+
+
+strong{
+  font-weight:600 !important;
+}
