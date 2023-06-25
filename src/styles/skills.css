@@ -83,7 +83,14 @@ min-height: 100vh;
   margin-bottom : 10px;
 }
 
-
+.Skills-header{
+  font-family: var(--main-font);
+  position: absolute;
+  margin-top: 5%;
+  font-weight:800;
+  font-size:2rem;
+  margin-left:5%;
+}
 .Skills-main-footer{
   display:flex;
   align-items: flex-end;
@@ -108,4 +115,13 @@ min-height: 100vh;
 
 strong{
   font-weight:600 !important;
+}
+
+
+.Skills-sticker{
+  bottom:-50px;
+  left:50vw;
+  position:fixed;
+  max-width:300px;
+  z-index:10;
 }

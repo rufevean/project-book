@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+:root{
+  --main-font : 'Quicksand', sans-serif;
+  --main-color: #BCC1BA
+}
+
+.work{
+  background:#BCC1BA;
+ min-height: 100vh;
+}
+
+
+.work-container{
+  display:flex;
+  gap:50px;
+  height:70vh;
+  align-items:center;
+  justify-content:center;
+}
+
+
+.con{
+  font-family: var(--main-font);
+  min-height:20%;
+  border-radius: 15px;
+  background: #1E1E24;
+  color:#BCC1BA;
+  padding:30px;
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  gap:30px;
+  max-width:15vw;
+  text-align:center;
+  font-size:1.2rem;
+  z-index:1;
+}
+.con >img{
+ max-width:95%; 
+}
+.arx-stack{
+    display:flex;
+    gap:15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.arx-stack > img{
+  max-height:25px;
+}
+
+.work-header{
+  margin-left:10%;
+  font-family:var(--main-font);
+  color:#1E1E24;
+  padding-top:12vh;
+  font-weight:800;
+  font-size:2rem;
+}
+
+.work-sticker{
+  z-index:0;
+  position:fixed;
+  right:-20px;
+  bottom:30vh;
+  transform: rotate(270deg);
+}
